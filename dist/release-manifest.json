@@ -1,0 +1,138 @@
+{
+  "release_name": "georeferenced-ieee30-spatial-layer-v0.1.0-pre-release.zip",
+  "package_version": "0.1.0-pre-release",
+  "license": "CC-BY-4.0",
+  "assets": [
+    {
+      "path": ".zenodo.json",
+      "sha256": "2b11140ade7e8c98c9541b90bc0035b41056d5c140c90f2a07e6c979e74a34c0",
+      "role": "release file"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "148852406b859fb35f2bec19673dc3aef0b495248f1f38e5c640d00572a45ddf",
+      "role": "release file"
+    },
+    {
+      "path": "LICENSE-code",
+      "sha256": "81da2a9fff8a696012dc6713f9c0b9571a5f2aa16b05621adec336241e03a27c",
+      "role": "release file"
+    },
+    {
+      "path": "LICENSE-data.md",
+      "sha256": "100164af1ff35e88566eede69e0652348cba3faedfb3f05adcf0cf6fa190f2b2",
+      "role": "release file"
+    },
+    {
+      "path": "README.md",
+      "sha256": "69c83511ae0a67d5877a03807b21144c5b325e1406af03296f0f286504713c5d",
+      "role": "release file"
+    },
+    {
+      "path": "data/network/README.md",
+      "sha256": "97a9e0c9569c3b826b9beb7366fd73235f14c76754bd1de9bf6c2c3b8818978c",
+      "role": "release file"
+    },
+    {
+      "path": "data/network/canonical-network.geojson",
+      "sha256": "aa168c1ed2ded56745a3c61e8fb3bac6724ded7b899f25236ec622d7be18749a",
+      "role": "release file"
+    },
+    {
+      "path": "data/network/manifest.json",
+      "sha256": "5fdf3be6d60f7c63d58fcb81ed5ba61fe9b8dc86a91887e00bee0688fb447377",
+      "role": "release file"
+    },
+    {
+      "path": "data/network/schema.json",
+      "sha256": "57aeb547ce05cc77b9bceaddf3b24028f83d1faa83327087a1976818670dde4b",
+      "role": "release file"
+    },
+    {
+      "path": "docs/data-dictionary.md",
+      "sha256": "55c29892dafa8a32a1fef414cac3e0bfb76220575ce3b48c694cb7f342d0cee8",
+      "role": "release file"
+    },
+    {
+      "path": "docs/dataset-positioning.md",
+      "sha256": "cb41f21a60168fc50b90182439ddb025b0e09f4eae3b5941a274e1b3fbe64383",
+      "role": "release file"
+    },
+    {
+      "path": "docs/datasheet.md",
+      "sha256": "c5597402089550e12194e2980b844074806b7e63524229d3b152ade446294a54",
+      "role": "release file"
+    },
+    {
+      "path": "docs/phase-0/scope-freeze.md",
+      "sha256": "04afbd9a0d651530f6c46c8e8b203df71772ede83a16df4093f5927d889ed4bd",
+      "role": "release file"
+    },
+    {
+      "path": "docs/phase-1/spatial-technical-validation.json",
+      "sha256": "1a43d06ab94b0185ad2fb71f6ed323a848e8d857611d4e4221959b0a58f66e1b",
+      "role": "release file"
+    },
+    {
+      "path": "docs/release-candidate.md",
+      "sha256": "f15632b649bbe6ba5873ffd28beceb2614d1e8ba11026808866f2c75cdcfdf47",
+      "role": "release file"
+    },
+    {
+      "path": "docs/technical-scope-and-evidence.md",
+      "sha256": "0c1931ceb1f5b3865f97e41eeb896680910c86b4258cf0906ba95a3c44b453ca",
+      "role": "release file"
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
+      "role": "release file"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "3637b74cedae8cf27357f8592d5fd69dbff4152affa727ae2915fb973f09fedf",
+      "role": "release file"
+    },
+    {
+      "path": "scripts/build_release_package.py",
+      "sha256": "dbd35a0d117d69d204c0efb3eadc9b7560f64379dc0016490fc3b2345af99edc",
+      "role": "release file"
+    },
+    {
+      "path": "scripts/validate_release_package.py",
+      "sha256": "b1c6ec525be4f2be9040bcaf188befa81880d743092bd261d8b5b86bf4478553",
+      "role": "release file"
+    },
+    {
+      "path": "scripts/validate_spatial_layer.py",
+      "sha256": "b0de736fdb482a928be5bb672ae95a38e7658849597a7dde56526d40f643e937",
+      "role": "release file"
+    },
+    {
+      "path": "src/release_package.py",
+      "sha256": "8fdc3733a91fdc3b96f20cbdd019d34c6974f20cbc5df509301012f62034b153",
+      "role": "release file"
+    },
+    {
+      "path": "src/spatial_validation.py",
+      "sha256": "870f864d0036a4a161348dc69ff4d561a8edac8ffcb4b7a98136c12fc332f49f",
+      "role": "release file"
+    },
+    {
+      "path": "tests/test_release_package.py",
+      "sha256": "6656fcdcd04810db521d12720adec2afdea775237390fce41adf3004092fb686",
+      "role": "release file"
+    }
+  ],
+  "topology_provenance": {
+    "external_reference": "Sohrabi et al. (2024), IEEE Access, DOI 10.1109/ACCESS.2024.3439724",
+    "role": "unbundled electrical-topology crosswalk reference",
+    "included_payload": false
+  },
+  "excluded_categories": [
+    "FARSITE executable or source",
+    "copied PYPOWER or MATPOWER payload",
+    "third-party fuel, weather, landscape, or historical-output payload"
+  ],
+  "self_integrity": "Manifest is exempt from member checksum to avoid a self-referential digest; SHA256SUMS fixes the outer archive."
+}

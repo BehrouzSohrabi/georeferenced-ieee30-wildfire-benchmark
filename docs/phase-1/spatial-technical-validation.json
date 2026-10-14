@@ -1,0 +1,31 @@
+{
+  "validation_method": {
+    "storage_crs": "EPSG:4326",
+    "metric_crs": "EPSG:3310",
+    "axis_order": "longitude,latitude",
+    "transformer": "pyproj always_xy=True"
+  },
+  "errors": [],
+  "counts": {
+    "buses": 30,
+    "branches": 41,
+    "lines": 34,
+    "links": 7
+  },
+  "endpoint_alignment": {
+    "max_distance_m": 0.0,
+    "threshold_m": 0.01
+  },
+  "geometry": {
+    "invalid_or_non_simple_or_zero_length": 0
+  },
+  "topology": {
+    "connected": true
+  },
+  "lengths_epsg_3310": {
+    "total_m": 687388.234,
+    "total_km": 687.388234,
+    "min_m": 129.562,
+    "max_m": 54267.291
+  }
+}

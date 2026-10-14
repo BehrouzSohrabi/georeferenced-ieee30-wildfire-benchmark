@@ -1,0 +1,10 @@
+# Normalize text files and preserve archive bytes
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.cff text eol=lf
+*.ini text eol=lf
+LICENSE* text eol=lf
+*.geojson text eol=lf
+*.zip binary

@@ -1,0 +1,4 @@
+# Reproducible spatial-validation environment
+jsonschema==4.26.0
+pyproj==3.7.2
+shapely==2.2.0

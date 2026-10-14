@@ -1,0 +1,26 @@
+{
+  "dataset_title": "Georeferenced IEEE 30-bus spatial layer",
+  "version": "0.1.0-pre-release",
+  "created": "2026-10-11",
+  "crs": "EPSG:4326",
+  "license": "CC BY 4.0 for the project-authored georeferencing layer; see LICENSE-data.md",
+  "asset": {
+    "path": "data/network/canonical-network.geojson",
+    "sha256": "aa168c1ed2ded56745a3c61e8fb3bac6724ded7b899f25236ec622d7be18749a",
+    "format": "GeoJSON FeatureCollection",
+    "bus_point_count": 30,
+    "branch_route_count": 41,
+    "derived_by": "scripts/build_canonical_network.py",
+    "quality_controls": [
+      "Branch identifiers reconciled to selected electrical topology",
+      "Branch 24 fixed to 19->20",
+      "Routes reoriented to fbus->tbus",
+      "Endpoints snapped only when within 500 m of their mapped bus"
+    ]
+  },
+  "excluded_material": [
+    "FARSITE executable and source",
+    "Copied PYPOWER/MATPOWER source files",
+    "Third-party fuel, weather, and landscape payloads unless separately versioned and cleared"
+  ]
+}

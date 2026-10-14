@@ -1,0 +1,11 @@
+{
+  "title": "Georeferenced IEEE 30-bus spatial layer",
+  "version": "0.1.0-pre-release",
+  "upload_type": "dataset",
+  "publication_date": "2026-10-11",
+  "description": "<p>A project-authored, synthetic georeferencing and spatial benchmark layer for the IEEE 30-bus test system. The release provides GeoJSON bus locations and branch routes, stable identifiers, topology crosswalk fields, validation code, a machine-readable manifest, and documentation for reproducible method benchmarking.</p><p>It does not contain FARSITE, copied IEEE/PYPOWER/MATPOWER payloads, or uncleared third-party fuel, weather, or landscape files.</p>",
+  "creators": [{"name": "Sohrabi, Behrouz"}],
+  "license": "CC-BY-4.0",
+  "keywords": ["IEEE 30-bus", "georeferenced power systems", "wildfire-grid benchmark", "GeoJSON", "reproducibility"],
+  "access_right": "open"
+}
