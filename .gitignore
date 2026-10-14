@@ -16,6 +16,14 @@ Thumbs.db
 *.pem
 logs/private/
 
+# Manuscript compilation by-products
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fls
+manuscript/*.log
+manuscript/compile-pass*.log
+
 # Immutable upstream audit clone; provenance is retained via source URL, commit and manifest.
 sources/IGREFire/
 

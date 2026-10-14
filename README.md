@@ -4,8 +4,8 @@ A reproducible, synthetic spatial dataset built around a **new, project-authored
 
 ## Status
 
-**Phase:** 0 — scoping, audit, and decisions (started 2026-10-11)  
-**Release status:** Not yet public; no DOI or production dataset has been minted.  
+**Phase:** 1 — spatial-layer technical validation and release preparation (started 2026-10-11)  
+**Release status:** Public GitHub pre-release candidate; no DOI or archival production release has been minted.  
 **Governing plan:** [`docs/project-guideline-v1.0.md`](docs/project-guideline-v1.0.md)
 
 ## Core principles

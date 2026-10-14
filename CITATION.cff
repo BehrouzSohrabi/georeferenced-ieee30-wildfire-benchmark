@@ -12,11 +12,11 @@ abstract: >-
   A project-authored, synthetic georeferencing and spatial benchmark layer for
   the IEEE 30-bus test system. It contains bus coordinates, branch routes,
   stable identifiers, topology crosswalk fields, provenance, and validation
-  metadata for reproducible wildfire-grid method benchmarking.
+  metadata for reproducible spatial-method benchmarking.
 keywords:
   - IEEE 30-bus
   - georeferenced power systems
   - wildfire-grid benchmark
   - GeoJSON
   - reproducibility
-repository-code: "https://github.com/BehrouzSohrabi/IGREFire"
+repository-code: "https://github.com/BehrouzSohrabi/georeferenced-ieee30-wildfire-benchmark"

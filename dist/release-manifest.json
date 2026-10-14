@@ -10,7 +10,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "148852406b859fb35f2bec19673dc3aef0b495248f1f38e5c640d00572a45ddf",
+      "sha256": "53efc30e480b1a08ce126dff15aad3b24713ad84aab3c59da6487217d57f334b",
       "role": "release file"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "69c83511ae0a67d5877a03807b21144c5b325e1406af03296f0f286504713c5d",
+      "sha256": "aae5c308e5ad1c1913774f0ae26bb26121a96bff510cecccf825ff4b7e98b679",
       "role": "release file"
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "path": "requirements.txt",
-      "sha256": "3637b74cedae8cf27357f8592d5fd69dbff4152affa727ae2915fb973f09fedf",
+      "sha256": "656310465cf9b315cb46c3ee0f91d98d311b1d7f55528e64490b355cdb085cb3",
       "role": "release file"
     },
     {
