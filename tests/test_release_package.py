@@ -64,6 +64,30 @@ class ReleasePackageTests(unittest.TestCase):
         self.assertTrue(report["topology"]["connected"])
         self.assertEqual(report["lengths_epsg_3310"]["total_m"], 687388.234)
 
+    def test_canonical_geojson_uses_platform_independent_lf_bytes(self):
+        payload = (ROOT / "data/network/canonical-network.geojson").read_bytes()
+        self.assertNotIn(b"\r\n", payload)
+
+    def test_release_archive_rejects_root_asset_drift(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = Path(temporary)
+            release_manifest = json.loads((ROOT / "dist/release-manifest.json").read_text(encoding="utf-8"))
+            for relative in ("dist/release-manifest.json", "dist/SHA256SUMS", f"dist/{release_manifest['release_name']}"):
+                destination = fixture / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(ROOT / relative, destination)
+            for asset in release_manifest["assets"]:
+                relative = asset["path"]
+                destination = fixture / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(ROOT / relative, destination)
+
+            drifted = fixture / "requirements.txt"
+            drifted.write_text(drifted.read_text(encoding="utf-8") + "# drift\n", encoding="utf-8")
+            errors = validate_release_archive(fixture)
+
+        self.assertIn("root asset checksum mismatch: requirements.txt", errors)
+
     def test_release_archive_is_frozen_and_clean(self):
         self.assertEqual(validate_release_archive(ROOT), [])
 

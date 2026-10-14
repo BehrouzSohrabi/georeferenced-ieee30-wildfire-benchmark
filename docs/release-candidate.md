@@ -1,15 +1,12 @@
 # Release candidate contents
 
-The v0.1.0-pre-release package contains only the clean, project-authored spatial benchmark and the code/documentation needed to inspect it:
+The v0.1.0-pre-release package contains only the project-authored spatial benchmark derivative and the code/documentation needed to inspect its distributed form:
 
-- `data/network/canonical-network.geojson`
-- `data/network/manifest.json`
-- `data/network/schema.json`
-- `data/network/README.md`
-- `src/network_curation.py`
-- `src/release_package.py`
-- `scripts/build_canonical_network.py`
-- `scripts/validate_release_package.py`
-- validation tests, licenses, citation metadata, and scope documentation
+- `data/network/canonical-network.geojson`, schema, manifest, README, and machine-readable provenance record;
+- spatial and release validators;
+- canonicalization code and its regression tests, while **not** redistributing the upstream inputs required to execute the canonicalization builder;
+- data dictionary, datasheet, technical scope, reproduction boundary, licenses, citation metadata, and release-integrity metadata.
 
-It intentionally excludes FARSITE; copied IEEE/PYPOWER/MATPOWER files; and un-cleared fuel, weather, landscape, and historical-output files. No DOI has been minted and this archive has not been uploaded or published.
+The public GitHub repository is a **pre-release candidate**. Its ZIP is a deterministic inspection artifact, not a DOI-backed archival release. The package intentionally excludes FARSITE; copied IEEE/PYPOWER/MATPOWER files; upstream source snapshot files; and un-cleared fuel, weather, landscape, and historical-output files.
+
+See `docs/reproduction-boundary.md` for the distinction between validation of the distributed derivative and a future independent clean-room regeneration gate.

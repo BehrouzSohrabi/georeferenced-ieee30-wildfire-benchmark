@@ -6,7 +6,7 @@
   "license": "CC BY 4.0 for the project-authored georeferencing layer; see LICENSE-data.md",
   "asset": {
     "path": "data/network/canonical-network.geojson",
-    "sha256": "aa168c1ed2ded56745a3c61e8fb3bac6724ded7b899f25236ec622d7be18749a",
+    "sha256": "02fd8a0f02c91a0da68182153c01111838c360d6f85501323eddba65f9cce508",
     "format": "GeoJSON FeatureCollection",
     "bus_point_count": 30,
     "branch_route_count": 41,

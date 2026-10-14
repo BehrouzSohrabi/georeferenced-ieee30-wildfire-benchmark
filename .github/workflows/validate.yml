@@ -1,0 +1,29 @@
+name: Validate spatial-layer release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install validation environment
+        run: uv venv && uv pip install --python .venv/bin/python -r requirements.txt pytest
+      - name: Run schema, spatial, and release validation
+        run: |
+          uv run --with-requirements requirements.txt --with pytest pytest -q
+          uv run --with-requirements requirements.txt python scripts/validate_spatial_layer.py
+          python scripts/build_release_package.py
+          python scripts/validate_release_package.py
+          git diff --exit-code -- dist data/network/manifest.json docs/phase-1/spatial-technical-validation.json

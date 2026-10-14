@@ -11,15 +11,24 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 MANIFEST_PATH = DIST / "release-manifest.json"
 REQUIRED_ADDITIONS = {
+    "data/network/provenance.json",
     "docs/technical-scope-and-evidence.md",
     "docs/data-dictionary.md",
     "docs/datasheet.md",
+    "docs/reproduction-boundary.md",
     "docs/phase-1/spatial-technical-validation.json",
     "pytest.ini",
     "requirements.txt",
-    "src/spatial_validation.py",
+    "scripts/build_canonical_network.py",
     "scripts/build_release_package.py",
+    "scripts/validate_release_package.py",
     "scripts/validate_spatial_layer.py",
+    "src/network_curation.py",
+    "src/release_package.py",
+    "src/spatial_validation.py",
+    "tests/test_branch24_regression.py",
+    "tests/test_endpoint_snap_regression.py",
+    "tests/test_release_package.py",
 }
 
 

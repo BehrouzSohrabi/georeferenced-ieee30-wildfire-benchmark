@@ -43,24 +43,54 @@ def validate_release_manifest(root: Path) -> list[str]:
     return errors
 
 
+def _sha256_bytes(payload: bytes) -> str:
+    return hashlib.sha256(payload).hexdigest()
+
+
 def validate_release_archive(root: Path) -> list[str]:
+    """Verify the exact archive, its embedded manifest, and current source assets."""
     root = Path(root)
-    manifest = json.loads((root / "dist/release-manifest.json").read_text(encoding="utf-8"))
+    manifest_path = root / "dist/release-manifest.json"
+    manifest_bytes = manifest_path.read_bytes()
+    manifest = json.loads(manifest_bytes)
     archive = root / "dist" / manifest["release_name"]
     errors: list[str] = []
     expected = {item["path"]: item["sha256"] for item in manifest["assets"]}
+    if len(expected) != len(manifest["assets"]):
+        errors.append("duplicate asset path in release manifest")
     if not archive.is_file():
         return ["release archive is missing"]
+
+    sums = root / "dist/SHA256SUMS"
+    expected_sum_line = f"{_sha256_bytes(archive.read_bytes())}  {archive.name}"
+    if not sums.is_file() or sums.read_text(encoding="utf-8").strip() != expected_sum_line:
+        errors.append("outer archive checksum mismatch")
+
+    for path, digest in expected.items():
+        source = root / path
+        if not source.is_file():
+            errors.append("missing root asset: " + path)
+        elif _sha256_bytes(source.read_bytes()) != digest:
+            errors.append("root asset checksum mismatch: " + path)
+
     with zipfile.ZipFile(archive) as handle:
-        names = set(handle.namelist())
+        member_names = handle.namelist()
+        names = set(member_names)
+        if len(names) != len(member_names):
+            errors.append("duplicate archive member")
         forbidden = [n for n in names if any(x in n.lower() for x in ("farsite", "pypower", "matpower", "sources/"))]
         if forbidden:
             errors.append("restricted member: " + forbidden[0])
         for path, digest in expected.items():
             if path not in names:
                 errors.append("missing member: " + path)
-            elif hashlib.sha256(handle.read(path)).hexdigest() != digest:
+            elif _sha256_bytes(handle.read(path)) != digest:
                 errors.append("member checksum mismatch: " + path)
+        if "release-manifest.json" not in names:
+            errors.append("missing member: release-manifest.json")
+        elif handle.read("release-manifest.json") != manifest_bytes:
+            errors.append("embedded release manifest mismatch")
+
     allowed = set(expected) | {"release-manifest.json"}
     for path in sorted(names - allowed):
         errors.append("unexpected member: " + path)

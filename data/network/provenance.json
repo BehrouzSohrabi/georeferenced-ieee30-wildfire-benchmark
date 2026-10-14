@@ -1,0 +1,39 @@
+{
+  "record_type": "derived-spatial-asset-provenance",
+  "record_version": "1.0",
+  "output": {
+    "path": "data/network/canonical-network.geojson",
+    "sha256": "02fd8a0f02c91a0da68182153c01111838c360d6f85501323eddba65f9cce508",
+    "license_scope": "CC BY 4.0 applies only to the project-authored georeferencing layer; see LICENSE-data.md"
+  },
+  "upstream_pointer": {
+    "repository_url": "https://github.com/BehrouzSohrabi/IGREFire",
+    "commit": "194b15e2423e824a9a4447cb83c8e1cbef84dd0a",
+    "redistributed": false,
+    "rights_status": "Pointer and checksum evidence only. The upstream files are excluded from this release pending any required rights determination."
+  },
+  "verified_input_fingerprints": [
+    {
+      "path_at_pinned_commit": "data/grid/IEEE_30_bus_system.geojson",
+      "sha256": "45c88be6fe07c6b5e699807ccbf8657f3bd6b0c29856171b1943c9f4974f042c"
+    },
+    {
+      "path_at_pinned_commit": "data/grid/IEEE_30_bus_system.py",
+      "sha256": "ae223f1698dd45cd3211e0df47d9a29dd19959a4a63174c0b0de936f3ef8277d"
+    }
+  ],
+  "transformation": {
+    "entrypoint": "scripts/build_canonical_network.py",
+    "entrypoint_sha256": "02698178c2de7af878c766bd014c231f966aad017d2a1e10a9dfea2c24be4ddb",
+    "library": "src/network_curation.py",
+    "library_sha256": "2de8e900ff9d13c65be8088a97cd37ed3510fc5b2ec95b7df35a37ca3e0e7289",
+    "rules": [
+      "Reconcile branches to the selected study topology.",
+      "Correct the documented branch-24 label to 19->20.",
+      "Orient routes fbus->tbus.",
+      "Snap only source endpoints within 500 m of the associated bus coordinate.",
+      "Add stable bus_id/branch_id and normalized branch_type fields."
+    ]
+  },
+  "reproduction_status": "The fixed derivative and its validation/package checks are reproducible from this release. Regeneration from a clean clone is not yet claimed: it requires lawful retrieval of the pinned, excluded upstream inputs and a fresh independent rerun."
+}

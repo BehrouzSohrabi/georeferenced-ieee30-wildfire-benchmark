@@ -78,7 +78,7 @@ def canonicalize_network(base_geojson: Path, case_file: Path, output_geojson: Pa
             corrected.append(branch)
         props["fbus"], props["tbus"] = fbus, tbus
     output_geojson.parent.mkdir(parents=True, exist_ok=True)
-    output_geojson.write_text(json.dumps(network, indent=2) + "\n", encoding="utf-8")
+    output_geojson.write_bytes((json.dumps(network, indent=2) + "\n").encode("utf-8"))
     return {
         "corrected_branch_labels": corrected,
         "reoriented_branches": reoriented,

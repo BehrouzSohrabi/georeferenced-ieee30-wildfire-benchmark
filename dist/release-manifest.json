@@ -35,12 +35,17 @@
     },
     {
       "path": "data/network/canonical-network.geojson",
-      "sha256": "aa168c1ed2ded56745a3c61e8fb3bac6724ded7b899f25236ec622d7be18749a",
+      "sha256": "02fd8a0f02c91a0da68182153c01111838c360d6f85501323eddba65f9cce508",
       "role": "release file"
     },
     {
       "path": "data/network/manifest.json",
-      "sha256": "5fdf3be6d60f7c63d58fcb81ed5ba61fe9b8dc86a91887e00bee0688fb447377",
+      "sha256": "09fe5b84b7e902e3dd654117a52b4e9b3317499e4bb8d08ba9650cd70e328848",
+      "role": "release file"
+    },
+    {
+      "path": "data/network/provenance.json",
+      "sha256": "fe22c599f10bf53a9d4109d7255975dd9001a65fa8de3d2a82ac0ff645a4a6cf",
       "role": "release file"
     },
     {
@@ -70,12 +75,17 @@
     },
     {
       "path": "docs/phase-1/spatial-technical-validation.json",
-      "sha256": "1a43d06ab94b0185ad2fb71f6ed323a848e8d857611d4e4221959b0a58f66e1b",
+      "sha256": "73ddb9be146e67fe192dc099d228c68521fe386bca4fca6e08fea90fb892b936",
       "role": "release file"
     },
     {
       "path": "docs/release-candidate.md",
-      "sha256": "f15632b649bbe6ba5873ffd28beceb2614d1e8ba11026808866f2c75cdcfdf47",
+      "sha256": "6353b628f42cbec92d64bf11b12aae3c65f5794cb1504af4504b717e9e88ca99",
+      "role": "release file"
+    },
+    {
+      "path": "docs/reproduction-boundary.md",
+      "sha256": "2b5cef0ff1f18d6b8ef10a7ede7c6ce299e7e150ee849a0fcfb50c92ff3954e3",
       "role": "release file"
     },
     {
@@ -94,8 +104,13 @@
       "role": "release file"
     },
     {
+      "path": "scripts/build_canonical_network.py",
+      "sha256": "02698178c2de7af878c766bd014c231f966aad017d2a1e10a9dfea2c24be4ddb",
+      "role": "release file"
+    },
+    {
       "path": "scripts/build_release_package.py",
-      "sha256": "dbd35a0d117d69d204c0efb3eadc9b7560f64379dc0016490fc3b2345af99edc",
+      "sha256": "3731324e36461e7a694b41ab7f682f97093ae319e1ad704ae327fa51f68988c0",
       "role": "release file"
     },
     {
@@ -105,12 +120,17 @@
     },
     {
       "path": "scripts/validate_spatial_layer.py",
-      "sha256": "b0de736fdb482a928be5bb672ae95a38e7658849597a7dde56526d40f643e937",
+      "sha256": "69cf20abbd924db6801d51a76f741f59d5b1645f65dd9bd1601a1c99f5855e87",
+      "role": "release file"
+    },
+    {
+      "path": "src/network_curation.py",
+      "sha256": "2de8e900ff9d13c65be8088a97cd37ed3510fc5b2ec95b7df35a37ca3e0e7289",
       "role": "release file"
     },
     {
       "path": "src/release_package.py",
-      "sha256": "8fdc3733a91fdc3b96f20cbdd019d34c6974f20cbc5df509301012f62034b153",
+      "sha256": "60287032ef73417d6d99a337dbdb8551d91743d358dd326e49ba7da3b59dd853",
       "role": "release file"
     },
     {
@@ -119,8 +139,18 @@
       "role": "release file"
     },
     {
+      "path": "tests/test_branch24_regression.py",
+      "sha256": "2254ebbafaa074ec1d34ac8a12fccabed6f4c11026e99e2fa17af5e65e638bca",
+      "role": "release file"
+    },
+    {
+      "path": "tests/test_endpoint_snap_regression.py",
+      "sha256": "349efd64e09ab2592dbd0adbf9da1852106d4d932cd68870fe8703ac07986825",
+      "role": "release file"
+    },
+    {
       "path": "tests/test_release_package.py",
-      "sha256": "6656fcdcd04810db521d12720adec2afdea775237390fce41adf3004092fb686",
+      "sha256": "aeabd3e952164640899c16dfe30741b02890a1be7b117b61e9f1f78f86716f7c",
       "role": "release file"
     }
   ],
